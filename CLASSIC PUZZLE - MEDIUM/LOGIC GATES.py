@@ -31,6 +31,8 @@ def NXOR(A, B):
 
 # Process and print the results
 for i in range(m):
-    output_name, _type, input1, input2 = input().split() 
+    output_name, _type, input1, input2 = input().split()
+    #use eval to call the logic func
+    # loop throw dictionary 
     result = "".join(str(eval(f"{_type}(int(dic[input1][i]), int(dic[input2][i]))")) for i in range(len(dic[list(dic)[0]])))
     print(output_name, result.replace("0", "_").replace("1", "-"))
